@@ -1,7 +1,5 @@
-title: "Web Development Roadmap"
-description: "A multi-page developer vault powered by Jekyll"
-theme: jekyll-theme-architect
-plugins:
-  - jekyll-feed
+title: "Web Dev Vault"
+description: "Structured Developer Roadmap & Knowledge Base"
+theme: jekyll-theme-primer
 
 

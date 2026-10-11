@@ -124,6 +124,152 @@ ls -la
 
 ---
 
+Yes! That is the beauty of Jekyll on GitHub Pages: no complex build configs or Node dependencies needed—just clean Markdown files processed automatically.
+
+Here is how to expand your `web-dev-roadmap` project into a multi-page site with an updated, polished theme.
+
+---
+
+### Step 1: Upgrade to a Polished Theme (`jekyll-theme-architect` or `cayman`)
+
+Update `_config.yml` in your repository root to use the modern, styled **`architect`** theme (or **`cayman`**):
+
+```yaml
+title: "Web Development Roadmap"
+description: "A multi-page developer vault powered by Jekyll"
+theme: jekyll-theme-architect
+
+```
+
+---
+
+### Step 2: Create `frontend.md`
+
+Create a file named `frontend.md` in your repository root:
+
+```markdown
+---
+layout: default
+title: "Frontend Development"
+---
+
+[← Back to Home](./)
+
+# 🎨 Frontend Development Roadmap
+
+Welcome to the Frontend module! Below are the core foundational technologies for building modern user interfaces.
+
+---
+
+## 🏗️ 1. HTML5
+* **Semantic Elements:** Standardized document layout (`<header>`, `<nav>`, `<article>`, `<footer>`).
+* **Accessibility (a11y):** ARIA roles, image alt texts, and keyboard navigation.
+
+## 🎨 2. CSS3
+* **Layout Engines:** Master **Flexbox** for 1D alignments and **CSS Grid** for 2D page layouts.
+* **Responsive Design:** Media queries and fluid units (`rem`, `vw`, `%`).
+
+## ⚡ 3. JavaScript (ES6+)
+* **Core Syntax:** Variables (`const`/`let`), arrow functions, destructuring, and modules.
+* **DOM & Async:** Modifying elements, handling events, and `fetch()` API for backend integration.
+
+---
+
+[Explore Backend Module →](./backend)
+
+```
+
+---
+
+### Step 3: Create `backend.md`
+
+Create a file named `backend.md` in your repository root:
+
+```markdown
+---
+layout: default
+title: "Backend Development"
+---
+
+[← Back to Home](./)
+
+# ⚙️ Backend Development Roadmap
+
+Welcome to the Backend module! This guide covers server-side architectures, API design, and database integration.
+
+---
+
+## 🟢 1. Node.js
+* **Event Loop & Runtimes:** Non-blocking I/O operations and asynchronous execution.
+* **REST APIs:** Building server endpoints using Express.js or Fastify.
+
+## 🐘 2. PHP
+* **Server-Side Scripting:** Processing forms, session handling, and database integration via PDO.
+* **Object-Oriented Design:** OOP principles and modern MVC framework patterns (Laravel).
+
+## 🐹 3. Go
+* **High Performance:** Compiled binaries, strong typing, and minimal memory footprint.
+* **Concurrency:** Managing parallel operations effortlessly using Goroutines and Channels.
+
+---
+
+[Explore Frontend Module →](./frontend)
+
+```
+
+---
+
+### Step 4: Update `index.md` with Multi-Page Navigation
+
+Update your root `index.md` to link everything together cleanly:
+
+```markdown
+---
+layout: default
+title: "Home"
+---
+
+# 🚀 Web Development Roadmap Vault
+
+Welcome to the central hub! Click any module below to dive into structured learning paths and core developer topics.
+
+---
+
+## 📚 Vault Modules
+
+* 🎨 **[Frontend Development Roadmap](./frontend)**  
+  *HTML5, CSS3, JavaScript, Responsive Design, and UI Frameworks.*
+
+* ⚙️ **[Backend Development Roadmap](./backend)**  
+  *Node.js, PHP, Go, REST APIs, and Databases.*
+
+---
+
+## 🧪 Jekyll Dynamic Feature Test
+
+This page was generated automatically by GitHub Pages on **{{ "now" | date: "%B %d, %Y" }}**.
+
+```
+
+---
+
+### Step 5: Stage, Commit, and Push
+
+Run these commands in your terminal to deploy the update:
+
+```bash
+git add .
+git commit -m "Upgrade Jekyll theme to Architect and add Frontend/Backend pages"
+git push -u origin main
+
+```
+
+Once GitHub Pages builds the site (~1 minute), refresh `[https://raconobe.github.io/web-dev-roadmap/](https://raconobe.github.io/web-dev-roadmap/)` to see the polished theme and multi-page navigation in action!
+
+
+
+---
+
 ### Step-by-Step for a New Repository
 
 If this is a completely fresh folder on your machine, run these commands in order:

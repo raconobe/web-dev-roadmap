@@ -3,60 +3,31 @@ layout: default
 title: "Home"
 ---
 
+<div class="top-nav">
+  <a href="./">🏠 Home</a>
+  <a href="./frontend">🎨 Frontend</a>
+  <a href="./backend">⚙️ Backend</a>
+</div>
+
 # 🚀 Web Development Roadmap Vault
 
-Welcome to the central hub! Click any module below to dive into structured learning paths and core developer topics.
+Welcome to the central developer hub! Select a functional path below to explore structured learning modules.
+
+<div class="card-grid">
+  <div class="card">
+    <h3>🎨 <a href="./frontend">Frontend Roadmap</a></h3>
+    <p>Semantic HTML5, CSS layout engines (Flexbox/Grid), modern JavaScript (ES6+), and responsive UI design.</p>
+  </div>
+
+  <div class="card">
+    <h3>⚙️ <a href="./backend">Backend Roadmap</a></h3>
+    <p>Node.js runtime, PHP MVC engines, Go concurrency, REST API architectures, and SQL database management.</p>
+  </div>
+</div>
 
 ---
 
-## 📚 Vault Modules
+### 🛠️ Vault Information
 
-* 🎨 **[Frontend Development Roadmap](./frontend)**  
-  *HTML5, CSS3, JavaScript, Responsive Design, and UI Frameworks.*
-
-* ⚙️ **[Backend Development Roadmap](./backend)**  
-  *Node.js, PHP, Go, REST APIs, and Databases.*
-
----
-
-## 🧪 Jekyll Dynamic Feature Test
-
-This page was generated automatically by GitHub Pages on **{{ "now" | date: "%B %d, %Y" }}**.
-
-
- 
-
-# 🚀 Web Development Roadmap (Jekyll Edition)
-
-Welcome to the vault! Below is a comparison of Frontend vs. Backend core technologies compiled with Jekyll and Liquid tags.
-
----
-
-## 🎨 Frontend Technologies
-
-Jekyll handles lists using standard Markdown or embedded Liquid loops:
-
-* 🏗️ **HTML5** — Document structure and semantic web.
-* 🎨 **CSS3** — Flexbox, CSS Grid, and responsive design.
-* ⚡ **JavaScript** — DOM manipulation, ES6+ features, and dynamic web components.
-
----
-
-## ⚙️ Backend Technologies
-
-* 🟢 **Node.js** — Event-driven JavaScript runtime for scalable network applications.
-* 🐘 **PHP** — Server-side engine for dynamic web apps and database management.
-* 🐹 **Go** — Compiled, concurrent backend services and microservices.
-
----
-
-## 🧪 Liquid Template Test
-
-This site was compiled at: **{{ "now" | date: "%Y-%m-%d %H:%M" }}**
-
-{% assign tools = "Git, Debian Linux, Docker, VitePress, Jekyll" | split: ", " %}
-
-### Developer Environment Tools:
-{% for tool in tools %}
-- {{ tool }}
-{% endfor %}
+* **Generated On:** {{ "now" | date: "%B %d, %Y" }}
+* **Engine:** Jekyll Static Generator on GitHub Pages

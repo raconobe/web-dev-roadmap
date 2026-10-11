@@ -2,6 +2,13 @@
 layout: default
 title: "Backend Development"
 ---
+<div class="top-nav">
+  <a href="./">🏠 Home</a>
+  <a href="./frontend">🎨 Frontend</a>
+  <a href="./backend">⚙️ Backend</a>
+</div>
+
+
 
 [← Back to Home](./)
 

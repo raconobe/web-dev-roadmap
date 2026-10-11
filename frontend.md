@@ -3,6 +3,14 @@ layout: default
 title: "Frontend Development"
 ---
 
+<div class="top-nav">
+  <a href="./">🏠 Home</a>
+  <a href="./frontend">🎨 Frontend</a>
+  <a href="./backend">⚙️ Backend</a>
+</div>
+
+
+
 [← Back to Home](./)
 
 # 🎨 Frontend Development Roadmap
