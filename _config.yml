@@ -1,5 +1,7 @@
-title: "Web Dev Roadmap & Tech Vault"
-description: "Comparing Static Generators with Jekyll"
-theme: minima
+title: "Web Development Roadmap"
+description: "A multi-page developer vault powered by Jekyll"
+theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
+
+

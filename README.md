@@ -107,3 +107,50 @@ This site was compiled at: **{{ "now" | date: "%Y-%m-%d %H:%M" }}**
 
 
 ---
+
+
+
+Only if the folder isn't initialized as a Git repository yet!
+
+Run this command inside your folder to check:
+
+```bash
+ls -la
+
+```
+
+* **If you see a `.git` folder in the list:** You do **not** need `git init`. Jump straight to staging and pushing.
+* **If you DO NOT see a `.git` folder:** Run `git init` first, then link your GitHub repository.
+
+---
+
+### Step-by-Step for a New Repository
+
+If this is a completely fresh folder on your machine, run these commands in order:
+
+```bash
+cd ~/Desktop/projects-vault-raco/web-dev-roadmap
+
+# 1. Initialize local repository
+git init
+
+# 2. Stage all created files (_config.yml, index.md, etc.)
+git add .
+
+# 3. Create your first commit
+git commit -m "Initialize Jekyll site structure and roadmap"
+
+# 4. Set main as the default branch
+git branch -M main
+
+# 5. Connect your local folder to your remote GitHub repository
+git remote add origin git@github.com-raco:raconobe/web-dev-roadmap.git
+
+# 6. Push your files to GitHub
+git push -u origin main
+
+```
+
+*(Note: If you created the repository on GitHub with HTTPS instead of SSH, use `[https://github.com/raconobe/web-dev-roadmap.git](https://github.com/raconobe/web-dev-roadmap.git)` in step 5).*
+
+Once pushed, head over to **Settings -> Pages** in your GitHub repository and set the branch source to **`main`** / **`/(root)`**!

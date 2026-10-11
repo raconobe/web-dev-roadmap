@@ -1,7 +1,30 @@
 ---
-layout: home
-title: "Frontend & Backend Hub"
+layout: default
+title: "Home"
 ---
+
+# 🚀 Web Development Roadmap Vault
+
+Welcome to the central hub! Click any module below to dive into structured learning paths and core developer topics.
+
+---
+
+## 📚 Vault Modules
+
+* 🎨 **[Frontend Development Roadmap](./frontend)**  
+  *HTML5, CSS3, JavaScript, Responsive Design, and UI Frameworks.*
+
+* ⚙️ **[Backend Development Roadmap](./backend)**  
+  *Node.js, PHP, Go, REST APIs, and Databases.*
+
+---
+
+## 🧪 Jekyll Dynamic Feature Test
+
+This page was generated automatically by GitHub Pages on **{{ "now" | date: "%B %d, %Y" }}**.
+
+
+ 
 
 # 🚀 Web Development Roadmap (Jekyll Edition)
 
