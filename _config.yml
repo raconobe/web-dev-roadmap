@@ -1,0 +1,5 @@
+title: "Web Dev Roadmap & Tech Vault"
+description: "Comparing Static Generators with Jekyll"
+theme: minima
+plugins:
+  - jekyll-feed
