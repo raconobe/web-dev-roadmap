@@ -300,3 +300,222 @@ git push -u origin main
 *(Note: If you created the repository on GitHub with HTTPS instead of SSH, use `[https://github.com/raconobe/web-dev-roadmap.git](https://github.com/raconobe/web-dev-roadmap.git)` in step 5).*
 
 Once pushed, head over to **Settings -> Pages** in your GitHub repository and set the branch source to **`main`** / **`/(root)`**!
+
+
+
+----
+
+
+The **Architect** theme takes up huge vertical space with that header banner and handwritten font.
+
+For a functional, space-efficient documentation layout, Jekyll's official **`jekyll-theme-primer`** (GitHub's standard design system) or **`jekyll-theme-slate`** gives you a much cleaner, compact presentation.
+
+We can also add custom CSS to format your modules as **side-by-side functional cards** with top navigation links.
+
+---
+
+### Step 1: Switch to `jekyll-theme-primer` and Add Navigation Header
+
+Update `_config.yml` in your project root:
+
+```yaml
+title: "Web Dev Vault"
+description: "Structured Developer Roadmap & Knowledge Base"
+theme: jekyll-theme-primer
+
+```
+
+---
+
+### Step 2: Inject Custom CSS for Responsive Cards
+
+Jekyll allows custom CSS overrides easily. Create a file at `assets/css/style.scss`:
+
+```scss
+---
+---
+@import "{{ site.theme }}";
+
+/* Compact container max-width */
+.container-lg {
+  max-width: 1080px !important;
+}
+
+/* Custom Navigation Bar */
+.top-nav {
+  display: flex;
+  gap: 15px;
+  background: #24292e;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.top-nav a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.top-nav a:hover {
+  color: #58a6ff;
+}
+
+/* Grid layout for Functional Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f6f8fa;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #0366d6;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #586069;
+  font-size: 0.9rem;
+}
+
+```
+
+---
+
+### Step 3: Update `index.md` with Card Grid Layout
+
+Update `index.md` to render the grid view:
+
+```markdown
+---
+layout: default
+title: "Home"
+---
+
+<div class="top-nav">
+  <a href="./">🏠 Home</a>
+  <a href="./frontend">🎨 Frontend</a>
+  <a href="./backend">⚙️ Backend</a>
+</div>
+
+# 🚀 Web Development Roadmap Vault
+
+Welcome to the central developer hub! Select a functional path below to explore structured learning modules.
+
+<div class="card-grid">
+  <div class="card">
+    <h3>🎨 <a href="./frontend">Frontend Roadmap</a></h3>
+    <p>Semantic HTML5, CSS layout engines (Flexbox/Grid), modern JavaScript (ES6+), and responsive UI design.</p>
+  </div>
+
+  <div class="card">
+    <h3>⚙️ <a href="./backend">Backend Roadmap</a></h3>
+    <p>Node.js runtime, PHP MVC engines, Go concurrency, REST API architectures, and SQL database management.</p>
+  </div>
+</div>
+
+---
+
+### 🛠️ Vault Information
+
+* **Generated On:** {{ "now" | date: "%B %d, %Y" }}
+* **Engine:** Jekyll Static Generator on GitHub Pages
+
+```
+
+---
+
+### Step 4: Update `frontend.md` and `backend.md` Headers
+
+In both `frontend.md` and `backend.md`, add the `<div class="top-nav">` snippet right under the frontmatter so navigation stays persistent across pages:
+
+```markdown
+<div class="top-nav">
+  <a href="./">🏠 Home</a>
+  <a href="./frontend">🎨 Frontend</a>
+  <a href="./backend">⚙️ Backend</a>
+</div>
+
+```
+
+---
+
+### Step 5: Push Updates
+
+```bash
+git add .
+git commit -m "Switch to compact Primer theme with CSS grid cards and top nav"
+git push -u origin main
+
+```
+
+When GitHub Pages finishes building (~1 minute), do a hard refresh (**`Ctrl + Shift + R`**). The huge header banner will be replaced by a clean, space-optimized dashboard layout!
+
+
+
+----
+
+
+Finding themes for both Jekyll and VitePress is easy once you know where to look. Because Jekyll relies on CSS/Ruby templates and VitePress relies on Vue/Tailwind, their theme marketplaces operate differently.
+
+---
+
+### Where to Find Jekyll Themes
+
+Since GitHub Pages natively supports Jekyll, the theme ecosystem is massive, offering thousands of free, open-source options ranging from minimal blogs to full documentation hubs.
+
+1. **Top Directories & Marketplaces:**
+* **[JekyllThemes.io](https://jekyllthemes.io/):** Curated list of high-quality portfolio, blog, and documentation themes.
+* **[Dr. Jekyll’s Themes](https://drjekyllthemes.github.io/):** Over 200+ free open-source themes with live demos.
+* **[Jamstack Themes (Jekyll)](https://jamstackthemes.dev/ssg/jekyll/):** Modern Jamstack-focused designs.
+* **[GitHub Topic `#jekyll-theme](https://github.com/topics/jekyll-theme)`:** Direct open-source repositories you can fork or add to your `_config.yml`.
+
+
+2. **Popular Jekyll Themes to Check Out:**
+* **`Minimal Mistakes`:** The gold standard for Jekyll—highly customizable, dark mode, multi-author, and space-efficient.
+* **`Just the Docs`:** Designed specifically for developer documentation, search indexing, and deep navigation trees.
+* **`Chirpy`:** A sleek, modern, tech-blog/vault theme with built-in code highlighting and sidebar navigation.
+
+
+
+---
+
+### Where to Find VitePress Themes
+
+VitePress ships with a flexible **Default Theme** that supports dark mode, automatic sidebars, top navs, and search out of the box. However, if you want completely different designs (like blogs, custom portfolios, or API docs), you can browse community themes.
+
+1. **Top Directories & Search Channels:**
+* **[GitHub Topic `#vitepress-theme](https://github.com/topics/vitepress-theme)`:** The primary hub where developers publish open-source VitePress themes.
+* **[Awesome VitePress](https://www.google.com/search?q=https://github.com/vitepress-awesome/awesome-vitepress):** A community-curated list of plugins, themes, and showcase sites.
+
+
+2. **Popular VitePress Custom Themes & Extensions:**
+* **`vitepress-theme-blog` / `vitepress-theme-trigger`:** Transforms VitePress from a documentation layout into a clean personal tech blog.
+* **`vitepress-theme-carbon`:** A dark-mode inspired theme built on IBM's Carbon design system.
+* **`vitepress-theme-api`:** Specifically designed for displaying REST API routes, payloads, and code snippets side-by-side.
+
+
+
+---
+
+### How Theme Customization Fits with Your Backend (Node/PHP)
+
+Whether you choose Jekyll or VitePress, remember that **the theme only affects the UI presentation layer**:
+
+* **If using Jekyll:** You tweak CSS/SASS files inside `assets/css/` or Liquid templates in `_layouts/`.
+* **If using VitePress:** You can customize styling using CSS variables or Tailwind CSS in `.vitepress/theme/index.js`, while still embedding Vue components that fetch live data from your Node.js or PHP REST API.
