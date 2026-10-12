@@ -1,3 +1,5 @@
+
+
 title: "Web Dev Roadmap"
 description: "Structured learning modules and developer vault."
 remote_theme: zerostaticthemes/jekyll-serif-theme
@@ -5,3 +7,10 @@ remote_theme: zerostaticthemes/jekyll-serif-theme
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-feed
+  - kramdown-parser-gfm
+
+collections:
+  java:
+    output: true
+    permalink: /java/:path/
