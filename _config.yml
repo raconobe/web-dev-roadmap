@@ -1,3 +1,5 @@
-theme: jekyll-theme-primer
+# theme: jekyll-theme-primer
+# theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 
-
+logo: /assets/images/logo.png
