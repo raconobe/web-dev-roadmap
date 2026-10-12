@@ -109,3 +109,26 @@
     margin-bottom: 2rem;
   }
 }
+
+
+/* assets/css/style.css - Add to the bottom */
+
+/* 1. Reduce the massive header spacing at the very top */
+.page-header {
+  padding: 1.5rem 1rem !important;
+}
+
+/* 2. Pull the main content wrapper closer to the header */
+.main-content, 
+.wrapper {
+  padding-top: 1rem !important;
+}
+
+/* 3. Align the sidebar and content perfectly with the top */
+.docs-layout {
+  margin-top: 0 !important;
+}
+
+.side-sidebar {
+  top: 1rem; /* Keeps it nicely tucked near the top when scrolling */
+}
