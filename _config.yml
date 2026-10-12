@@ -1,2 +1,7 @@
-theme: jekyll-theme-cayman
-logo: /assets/images/logo.png
+title: "Web Dev Roadmap"
+description: "Structured learning modules and developer vault."
+remote_theme: zerostaticthemes/jekyll-serif-theme
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
