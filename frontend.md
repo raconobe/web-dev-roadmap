@@ -1,43 +1,61 @@
 ---
-layout: page
-title: Frontend Roadmap
+layout: default
+title: "Frontend Roadmap"
 permalink: /frontend/
 ---
-# Frontend Development
 
----
-layout: default
-title: "Frontend Development"
----
+<div class="docs-layout">
 
-<div class="top-nav">
-  <a href="./">🏠 Home</a>
-  <a href="./frontend">🎨 Frontend</a>
-  <a href="./backend">⚙️ Backend</a>
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="side-sidebar">
+    <h3>📌 Overview</h3>
+    <ul>
+      <li><a href="./">🏠 Home Dashboard</a></li>
+    </ul>
+
+    <h3>🎨 Frontend Module</h3>
+    <ul>
+      <li><a href="./frontend/">Overview</a></li>
+      <li><a href="./frontend/#html5">1. HTML5</a></li>
+      <li><a href="./frontend/#css3">2. CSS3 & Layouts</a></li>
+      <li><a href="./frontend/#javascript">3. JavaScript (ES6+)</a></li>
+    </ul>
+
+    <h3>⚙️ Backend Module</h3>
+    <ul>
+      <li><a href="./backend/">Overview</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="docs-content">
+    <p><a href="./">← Back to Home</a></p>
+
+    <h1>🎨 Frontend Development Roadmap[cite: 7]</h1>
+    <p>Welcome to the Frontend module! Below are the core foundational technologies for building modern user interfaces[cite: 7].</p>
+
+    <hr>
+
+    <h2 id="html5">🏗️ 1. HTML5</h2>
+    <ul>
+      <li><strong>Semantic Elements:</strong> Standardized document layout (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>)[cite: 7].</li>
+      <li><strong>Accessibility (a11y):</strong> ARIA roles, image alt texts, and keyboard navigation[cite: 7].</li>
+    </ul>
+
+    <h2 id="css3">🎨 2. CSS3</h2>
+    <ul>
+      <li><strong>Layout Engines:</strong> Master <strong>Flexbox</strong> for 1D alignments and <strong>CSS Grid</strong> for 2D page layouts[cite: 7].</li>
+      <li><strong>Responsive Design:</strong> Media queries and fluid units (<code>rem</code>, <code>vw</code>, <code>%</code>)[cite: 7].</li>
+    </ul>
+
+    <h2 id="javascript">⚡ 3. JavaScript (ES6+)</h2>
+    <ul>
+      <li><strong>Core Syntax:</strong> Variables (<code>const</code>/<code>let</code>), arrow functions, destructuring, and modules[cite: 7].</li>
+      <li><strong>DOM & Async:</strong> Modifying elements, handling events, and <code>fetch()</code> API for backend integration[cite: 7].</li>
+    </ul>
+
+    <hr>
+    <p><a href="./backend/">Explore Backend Module →</a></p>
+  </main>
+
 </div>
-
-
-
-[← Back to Home](./)
-
-# 🎨 Frontend Development Roadmap
-
-Welcome to the Frontend module! Below are the core foundational technologies for building modern user interfaces.
-
----
-
-## 🏗️ 1. HTML5
-* **Semantic Elements:** Standardized document layout (`<header>`, `<nav>`, `<article>`, `<footer>`).
-* **Accessibility (a11y):** ARIA roles, image alt texts, and keyboard navigation.
-
-## 🎨 2. CSS3
-* **Layout Engines:** Master **Flexbox** for 1D alignments and **CSS Grid** for 2D page layouts.
-* **Responsive Design:** Media queries and fluid units (`rem`, `vw`, `%`).
-
-## ⚡ 3. JavaScript (ES6+)
-* **Core Syntax:** Variables (`const`/`let`), arrow functions, destructuring, and modules.
-* **DOM & Async:** Modifying elements, handling events, and `fetch()` API for backend integration.
-
----
-
-[Explore Backend Module →](./backend)

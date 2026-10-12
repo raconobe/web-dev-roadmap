@@ -1,72 +1,111 @@
 /* assets/css/style.css */
 
-/* 1. Expand the overall container width */
+/* Expand container width */
 .main-content, 
 .wrapper {
-  max-width: 1200px !important;
+  max-width: 1250px !important;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
 }
 
-/* 2. Create a 2-Column Sidebar Layout */
+/* Two-column documentation layout */
 .docs-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
   align-items: start;
 }
 
-/* 3. Style the Side Menu Box */
+/* Professional Sticky Sidebar */
 .side-sidebar {
-  background: #f8f9fa;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
   border-radius: 8px;
   padding: 1.5rem;
   position: sticky;
   top: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .side-sidebar h3 {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: #1f2937;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  color: #586069;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.35rem;
 }
 
 .side-sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.25rem 0;
 }
 
 .side-sidebar li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Multi-level Submenu Indentation */
+.side-sidebar ul ul {
+  margin-top: 0.4rem;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #e1e4e8;
 }
 
 .side-sidebar a {
   text-decoration: none;
-  color: #4b5563;
+  color: #0366d6;
   font-weight: 500;
+  font-size: 0.95rem;
   display: block;
-  padding: 0.35rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .side-sidebar a:hover {
-  background: #e5e7eb;
-  color: #111827;
+  background: #f1f8ff;
+  color: #0056b3;
 }
 
-/* Mobile responsive fallback: stack on small screens */
+/* Polished Card Grids for Content */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Mobile responsive fallback */
 @media (max-width: 768px) {
   .docs-layout {
     grid-template-columns: 1fr;
   }
   .side-sidebar {
     position: static;
+    margin-bottom: 2rem;
   }
 }
