@@ -58,3 +58,20 @@
   color: #586069;
   font-size: 0.9rem;
 }
+
+
+---
+---
+// Import default GitHub theme styles (if using a gem theme)
+@import "{{ site.theme }}";
+
+// Custom styles inspired by Serif
+body {
+  font-family: 'Georgia', serif;
+  color: #2b2b2b;
+}
+
+.nav-link {
+  color: #e53935;
+  font-weight: 500;
+}
