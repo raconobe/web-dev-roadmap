@@ -1,20 +1,7 @@
-<header class="header">
+<header class="site-header">
   <div class="container">
-    <div class="logo">
-      <a href="{{ '/' | relative_url }}">
-        {% if site.logo %}
-          <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
-        {% else %}
-          <strong>{{ site.title }}</strong>
-        {% endif %}
-      </a>
+    <div class="site-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
-    
-    <nav class="navbar-nav">
-      <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
-      <a class="nav-link" href="{{ '/frontend/' | relative_url }}">Frontend</a>
-      <a class="nav-link" href="{{ '/backend/' | relative_url }}">Backend</a>
-      <a class="nav-link" href="{{ '/java/' | relative_url }}">Java Course</a>
-    </nav>
   </div>
 </header>

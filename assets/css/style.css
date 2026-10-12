@@ -1,5 +1,10 @@
 /* assets/css/style.css */
 
+---
+---
+
+@import "serif";
+
 /* Expand container width */
 .main-content, 
 .wrapper {
