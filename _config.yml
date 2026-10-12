@@ -1,8 +1,9 @@
-
-
 title: "Web Dev Roadmap"
 description: "Structured learning modules and developer vault."
 remote_theme: zerostaticthemes/jekyll-serif-theme
+
+baseurl: "/web-dev-roadmap" 
+url: "https://raconobe.github.io"
 
 plugins:
   - jekyll-remote-theme
@@ -13,4 +14,4 @@ plugins:
 collections:
   java:
     output: true
-    permalink: /_java/:path/
+    permalink: /java/:path/
