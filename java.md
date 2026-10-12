@@ -1,9 +1,11 @@
 ---
-layout: page
-title: "Java Development Course"
+layout: doc
+title: "Java Course"
 permalink: /java/
 ---
 
+# Java Course Overview
+Welcome to the Java course module.
 # ☕ Java Development Course
 
 <div class="java-chapters">
