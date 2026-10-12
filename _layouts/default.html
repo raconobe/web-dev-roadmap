@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <!-- Link your compiled stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  {% include header.html %}
+  
+  <div class="main-content wrapper">
+    <div class="docs-layout">
+      <!-- Sidebar Navigation -->
+      <aside class="side-sidebar">
+        <h3>Overview</h3>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">🏠 Home Dashboard</a></li>
+        </ul>
+
+        <h3>Frontend Module</h3>
+        <ul>
+          <li><a href="{{ '/frontend/' | relative_url }}">Overview</a></li>
+          <li><a href="{{ '/frontend-html/' | relative_url }}">HTML5 & Structure</a></li>
+          <li><a href="{{ '/frontend-css/' | relative_url }}">CSS3 & Layouts</a></li>
+          <li><a href="{{ '/frontend-js/' | relative_url }}">JavaScript (ES6+)</a></li>
+        </ul>
+
+        <h3>Backend Module</h3>
+        <ul>
+          <li><a href="{{ '/backend/' | relative_url }}">Overview</a></li>
+          <li><a href="{{ '/backend-node/' | relative_url }}">Node.js Runtimes</a></li>
+          <li><a href="{{ '/backend-php/' | relative_url }}">PHP & MVC</a></li>
+          <li><a href="{{ '/backend-go/' | relative_url }}">Go Concurrency</a></li>
+        </ul>
+
+        <h3>Java Course</h3>
+        <ul>
+          <li><a href="{{ '/java/' | relative_url }}">Java Roadmap</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Page Content -->
+      <div class="content-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>
