@@ -1,11 +1,13 @@
-/* assets/css/style.css */
-
 ---
 ---
 
 @import "serif";
 
-/* Expand container width */
+/* ==========================================
+   1. Documentation & Sidebar Layout
+   ========================================== */
+
+/* Expand container width for roadmaps */
 .main-content, 
 .wrapper {
   max-width: 1250px !important;
@@ -54,14 +56,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* Multi-level Submenu Indentation */
-.side-sidebar ul ul {
-  margin-top: 0.4rem;
-  margin-left: 0.75rem;
-  padding-left: 0.75rem;
-  border-left: 2px solid #e1e4e8;
-}
-
 .side-sidebar a {
   text-decoration: none;
   color: #0366d6;
@@ -78,7 +72,10 @@
   color: #0056b3;
 }
 
-/* Polished Card Grids for Content */
+/* ==========================================
+   2. Polished Card Grids & Header Cleanup
+   ========================================== */
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,8 +97,14 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.card h3 {
-  margin-top: 0;
+/* Compact Header Spacing */
+.page-header {
+  padding: 1rem 1rem !important;
+}
+
+.skip-link, 
+.page-header .btn {
+  display: none !important;
 }
 
 /* Mobile responsive fallback */
@@ -113,40 +116,4 @@
     position: static;
     margin-bottom: 2rem;
   }
-}
-
-
-/* assets/css/style.css - Add to the bottom */
-
-/* 1. Reduce the massive header spacing at the very top */
-.page-header {
-  padding: 1.5rem 1rem !important;
-}
-
-/* 2. Pull the main content wrapper closer to the header */
-.main-content, 
-.wrapper {
-  padding-top: 1rem !important;
-}
-
-/* 3. Align the sidebar and content perfectly with the top */
-.docs-layout {
-  margin-top: 0 !important;
-}
-
-.side-sidebar {
-  top: 1rem; /* Keeps it nicely tucked near the top when scrolling */
-}
-
-
-
-/* Hide default theme clutter in the header */
-.skip-link, 
-.page-header .btn {
-  display: none !important;
-}
-
-/* Shrink header padding even more */
-.page-header {
-  padding: 1rem 1rem !important;
 }
