@@ -3,24 +3,34 @@ layout: default
 title: "Web Dev Roadmap"
 ---
 
-# 🚀 Web Development Roadmap Vault
+<div class="docs-layout">
 
-Welcome to the central developer hub! Select a functional path below to explore structured learning modules.
+  <!-- LEFT SIDE MENU -->
+  <nav class="side-sidebar">
+    <h3>📌 Navigation</h3>
+    <ul>
+      <li><a href="./">🏠 Home</a></li>
+      <li><a href="./frontend/">🎨 Frontend</a></li>
+      <li><a href="./backend/">⚙️ Backend</a></li>
+    </ul>
+  </nav>
 
-<div class="card-grid">
-  <div class="card">
-    <h3>🎨 <a href="./frontend/">Frontend Roadmap</a></h3>
-    <p>Semantic HTML5, CSS layout engines (Flexbox/Grid), modern JavaScript (ES6+), and responsive UI design.</p>
-  </div>
+  <!-- MAIN CONTENT AREA -->
+  <main class="docs-content">
+    <h1>🚀 Web Development Roadmap Vault</h1>
+    <p>Welcome to the central developer hub! Select a functional path below to explore structured learning modules.</p>
 
-  <div class="card">
-    <h3>⚙️ <a href="./backend/">Backend Roadmap</a></h3>
-    <p>Node.js runtime, PHP MVC engines, Go concurrency, REST API architectures, and SQL database management.</p>
-  </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🎨 <a href="./frontend/">Frontend Roadmap</a></h3>
+        <p>Semantic HTML5, CSS layout engines, modern JavaScript, and responsive UI design.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ <a href="./backend/">Backend Roadmap</a></h3>
+        <p>Node.js runtime, PHP MVC engines, Go concurrency, and SQL database management.</p>
+      </div>
+    </div>
+  </main>
+
 </div>
-
----
-
-### 🛠️ Vault Information
-
-- **Engine:** Jekyll Static Generator on GitHub Pages
