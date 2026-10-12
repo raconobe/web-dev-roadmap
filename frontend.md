@@ -1,4 +1,11 @@
 ---
+layout: page
+title: Frontend Roadmap
+permalink: /frontend/
+---
+# Frontend Development
+
+---
 layout: default
 title: "Frontend Development"
 ---
