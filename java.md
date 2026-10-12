@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Java Course Roadmap"
+title: "Java Development Course"
 permalink: /java/
 ---
 
