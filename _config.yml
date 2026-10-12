@@ -13,4 +13,4 @@ plugins:
 collections:
   java:
     output: true
-    permalink: /java/:path/
+    permalink: /_java/:path/
