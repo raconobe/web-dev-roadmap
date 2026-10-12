@@ -21,14 +21,19 @@ permalink: /frontend/
     <p><a href="./">← Back to Home</a></p>
 
     <h1>🎨 Frontend Development Roadmap</h1>
-    <p>Welcome to the Frontend module! Below are the core foundational technologies.</p>
+    <p>Welcome to the Frontend module! Below are the core foundational technologies for building modern user interfaces.</p>
 
     <hr>
 
-    <!-- INJECTING CHAPTERS FROM SEPARATE MARKDOWN FILES -->
-    {% include frontend-html.md %}
-    {% include frontend-css.md %}
-    {% include frontend-js.md %}
+    <!-- PROPERLY PARSED MARKDOWN INCLUDES -->
+    {% capture html_section1 %}{% include frontend-html.md %}{% endcapture %}
+    {{ html_section1 | markdownify }}
+
+    {% capture html_section2 %}{% include frontend-css.md %}{% endcapture %}
+    {{ html_section2 | markdownify }}
+
+    {% capture html_section3 %}{% include frontend-js.md %}{% endcapture %}
+    {{ html_section3 | markdownify }}
 
     <hr>
     <p><a href="./backend/">Explore Backend Module →</a></p>

@@ -132,3 +132,16 @@
 .side-sidebar {
   top: 1rem; /* Keeps it nicely tucked near the top when scrolling */
 }
+
+
+
+/* Hide default theme clutter in the header */
+.skip-link, 
+.page-header .btn {
+  display: none !important;
+}
+
+/* Shrink header padding even more */
+.page-header {
+  padding: 1rem 1rem !important;
+}
