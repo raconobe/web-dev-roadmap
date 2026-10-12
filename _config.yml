@@ -1,8 +1,3 @@
-title: "Web Dev Vault"
-description: "Structured Developer Roadmap & Knowledge Base"
-# theme: jekyll-theme-primer
-remote_theme: zerostaticthemes/jekyll-serif-theme
-plugins:
-  - jekyll-remote-theme
+theme: jekyll-theme-primer
 
 
